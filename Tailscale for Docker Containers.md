@@ -1,6 +1,6 @@
 The basic idea is to create a tailscale service container, that runs along side the main app container. You then set the main app container to use the tailscale container for networking.
 
-I followed this guide: [Using Tailscale with Docker](https://rnorth.org/tailscale-docker/)
+I followed this guide: [Using Tailscale with Docker](https://rnorth.org/tailscale-docker/).  Tailnets created after October 20, 2022 have MagicDNS on by default and will automatically register unique hostnames on the network.  Older tailnets must [enable MagicDNS in the DNS page of the admin console](https://tailscale.com/kb/1081/magicdns).
 
 So first you add the tailscale service to the docker-compose.yml file:
 
